@@ -5,13 +5,16 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] TextMeshProUGUI countdownText; // Add a separate TextMeshProUGUI for the countdown
+    [SerializeField] TextMeshProUGUI countdownText;
     private float elapsedTime;
-    private float countdownTime = 5f; // Countdown starts from 5 seconds
+    private float countdownTime = 5f;
     private bool isCountdownComplete = false;
 
     void Start()
     {
+        // Pause the game during the countdown
+        Time.timeScale = 0f;
+
         // Initialize the countdown text
         countdownText.gameObject.SetActive(true);
         timerText.gameObject.SetActive(false);
@@ -31,7 +34,8 @@ public class Timer : MonoBehaviour
 
     private void HandleCountdown()
     {
-        countdownTime -= Time.deltaTime;
+        // Use unscaled time for the countdown since timeScale is 0
+        countdownTime -= Time.unscaledDeltaTime;
         int seconds = Mathf.CeilToInt(countdownTime);
         countdownText.text = seconds.ToString();
 
@@ -40,6 +44,9 @@ public class Timer : MonoBehaviour
             isCountdownComplete = true;
             countdownText.gameObject.SetActive(false);
             timerText.gameObject.SetActive(true);
+
+            // Resume the game
+            Time.timeScale = 1f;
         }
     }
 
