@@ -5692,7 +5692,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.509
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9177,8 +9177,6 @@ MonoBehaviour:
   musicSource: {fileID: 1201643556}
   SFXSource: {fileID: 125286005}
   background: {fileID: 8300000, guid: 44cca509b76a21545a48c594e341d3c9, type: 3}
-  Boost: {fileID: 8300000, guid: bef068a944932eb43838261a72754aba, type: 3}
-  Car: {fileID: 8300000, guid: 651d9c1f923286440a6e377c7f34e81d, type: 3}
   Damage: {fileID: 8300000, guid: 040f7f046ecf12947a580b6b0e760584, type: 3}
   Collectable: {fileID: 8300000, guid: d20174feaf9d8504db985cad060b9c7a, type: 3}
   Die: {fileID: 8300000, guid: d0acab290b7dc114b9d37a61a40fef70, type: 3}
@@ -52439,7 +52437,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.831
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -64285,7 +64283,7 @@ GameObject:
   - component: {fileID: 1813447912}
   - component: {fileID: 1813447911}
   - component: {fileID: 1813447914}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FinishLine
   m_TagString: Finish
   m_Icon: {fileID: 0}

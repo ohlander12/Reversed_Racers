@@ -8,8 +8,6 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip background;
-    public AudioClip Boost;
-    public AudioClip Car;
     public AudioClip Damage;
     public AudioClip Collectable;
     public AudioClip Die;
