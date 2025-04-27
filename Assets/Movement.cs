@@ -8,6 +8,12 @@ public class Movement : MonoBehaviour
 
     public KeyCode boostKey = KeyCode.LeftShift;
 
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private Rigidbody2D rb;
 
     void Start()
@@ -23,11 +29,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             moveDirection = 1f;
+            audioManager.PlaySFX(audioManager.Car);
 
             if (Input.GetKey(boostKey))
             {
                 moveDirection *= reverseBoostMultiplier;
+                audioManager.PlaySFX(audioManager.Boost);
             }
+            
         }
         else if (Input.GetKey(KeyCode.W))
         {
@@ -35,6 +44,9 @@ public class Movement : MonoBehaviour
         }
 
         float rotationInput = 0f;
+
+        audioManager.PlaySFX(audioManager.Car);
+
         if (Input.GetKey(KeyCode.D))
         {
             rotationInput = 1f;

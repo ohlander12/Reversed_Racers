@@ -6,6 +6,12 @@ public class Health : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
 
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public bool isPlayer = false;
 
     void Start()
@@ -53,11 +59,13 @@ public class Health : MonoBehaviour
         if (other.CompareTag("Spikes"))
         {
             TakeDamage(1); // Damage from spikes
+            audioManager.PlaySFX(audioManager.Damage);
         }
         else if (other.CompareTag("Bolt"))
         {
             Heal(1); // Heal when picking up a Bolt
             Destroy(other.gameObject); // Remove the Bolt after picking it up
+            audioManager.PlaySFX(audioManager.Collectable);
         }
     }
 }
