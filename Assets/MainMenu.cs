@@ -8,4 +8,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("AllTiles");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
