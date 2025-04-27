@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/2DPixelFantasyTilemapFree/Scenes/StartMenu.unity
+    guid: be60ab4bf4c03304695c76b0be9f9f1a
+  - enabled: 1
+    path: Assets/2DPixelFantasyTilemapFree/Scenes/AllTiles.unity
+    guid: 0b309e54ca812c1439263d3cd92b36fb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
