@@ -9,14 +9,21 @@ public class FinishLineTrigger : MonoBehaviour
     {
         if (gameEnded) return;
 
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Player"))
         {
             gameEnded = true;
-            Debug.Log("Game ended! " + other.tag + " reached the finish line.");
+            Debug.Log("Game ended! You reached the finishline and won");
             {
-                SceneManager.LoadSceneAsync("StartMenu");
+                SceneManager.LoadSceneAsync("WonScreen");
             }
 
+        }
+        if (other.CompareTag("Enemy"))
+        {
+            gameEnded = true;
+            Debug.Log("Game ended! Enemy reached the finish line and you lost.");
+            SceneManager.LoadSceneAsync("LostScreen");
+            
         }
     }
 }

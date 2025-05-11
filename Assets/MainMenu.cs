@@ -17,6 +17,18 @@ public class MainMenu : MonoBehaviour
         audioManager.PlaySFX(audioManager.Play);
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadSceneAsync("AllTiles");
+        audioManager.PlaySFX(audioManager.Play);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadSceneAsync("StartMenu");
+        audioManager.PlaySFX(audioManager.Button);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
