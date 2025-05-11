@@ -6,6 +6,7 @@ public class EnemyDriver : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
 
+
     private int currentWaypointIndex = 0;
 
     void Update()

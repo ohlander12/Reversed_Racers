@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLineTrigger : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class FinishLineTrigger : MonoBehaviour
         {
             gameEnded = true;
             Debug.Log("Game ended! " + other.tag + " reached the finish line.");
+            {
+                SceneManager.LoadSceneAsync("StartMenu");
+            }
 
         }
     }
