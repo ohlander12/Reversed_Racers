@@ -11,8 +11,8 @@ public class Chronometre : MonoBehaviour
     void Start()
     {
         time = 0;
-        isStopped = true;
-
+        isStopped = false;
+        timeText = GameObject.Find("TimeText").GetComponent<Text>();
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class Chronometre : MonoBehaviour
             {
                 Vector3 cameraPos = mainCamera.transform.position;
                 timeText.text = $"Score: {time:F2}";
-                timeText.transform.position = new Vector3(cameraPos.x + 8, cameraPos.y + 4, 0.1f);
+                timeText.transform.position = new Vector3(8 , -6, 1);
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))
