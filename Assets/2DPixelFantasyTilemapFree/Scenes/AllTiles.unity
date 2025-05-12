@@ -15164,7 +15164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9dcd748c1383c4791d4f7837273a42, type: 3}
+  m_Script: {fileID: 11500000, guid: 56c6c3c62c02a2042927aae01e6e0f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 0}
@@ -16589,8 +16589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c6c3c62c02a2042927aae01e6e0f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1056150257}
-  countdownText: {fileID: 710185236}
+  timeText: {fileID: 0}
 --- !u!1 &807935044
 GameObject:
   m_ObjectHideFlags: 0
